@@ -11,14 +11,7 @@ import {
 } from "lucide-react";
 import heroCloud from "../assets/hero-cloud.jpg";
 import marta from "../assets/marta.jpg";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -183,77 +176,22 @@ function Index() {
       <Contact />
 
       <footer className="relative z-10 border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-8 text-sm text-muted md:flex-row">
-          <div className="flex items-center gap-2.5">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-6 py-8 text-sm text-muted md:grid-cols-3">
+          <div className="flex items-center gap-2.5 justify-center md:justify-start">
             <span className="grid size-7 place-items-center rounded-lg bg-gradient-to-br from-accent to-indigo-500 font-display text-sm font-bold text-white">
               V
             </span>
             <span className="font-display font-semibold text-ink">VECTRALYA</span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent/10 px-3 py-1 font-medium text-accent">
+          <div className="flex justify-center">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-medium text-accent sm:text-sm">
               <ShieldCheck className="size-3.5" />
               Web libre de cookies de rastreo
             </span>
-
-            <Dialog>
-              <DialogTrigger asChild>
-                <button
-                  type="button"
-                  className="cursor-pointer text-muted transition hover:text-ink underline decoration-white/20 underline-offset-4"
-                >
-                  Privacidad y Cookies
-                </button>
-              </DialogTrigger>
-              <DialogContent className="max-w-xl border-white/10 bg-brand text-ink">
-                <DialogHeader>
-                  <DialogTitle className="font-display text-2xl font-bold text-ink">
-                    Privacidad y Política de Cookies
-                  </DialogTitle>
-                  <DialogDescription className="text-muted text-sm mt-1">
-                    En VECTRALYA consideramos la privacidad y la soberanía de datos un principio de
-                    ingeniería fundamental.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="space-y-4 text-sm text-ink/90 mt-2">
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    <p className="font-semibold text-accent flex items-center gap-2">
-                      <ShieldCheck className="size-4" /> 100% Libre de cookies de seguimiento
-                    </p>
-                    <p className="text-muted text-xs mt-1 leading-relaxed">
-                      Este sitio web no utiliza cookies analíticas invasivas ni publicitarias. No
-                      instalamos píxeles de remarketing de Meta o LinkedIn ni compartimos tu
-                      navegación con redes comerciales.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-ink text-sm">
-                      Datos recogidos en el formulario
-                    </h4>
-                    <p className="text-muted text-xs mt-1 leading-relaxed">
-                      Los datos que nos facilitas voluntariamente (nombre, empresa, email y mensaje)
-                      se utilizan exclusivamente para evaluar tu necesidad y responder a tu
-                      solicitud de consultoría cloud. Nunca se comercializan ni ceden a terceros.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-ink text-sm">Tus derechos (RGPD)</h4>
-                    <p className="text-muted text-xs mt-1 leading-relaxed">
-                      Conforme al RGPD europeo, puedes solicitar en cualquier momento el acceso,
-                      rectificación o eliminación de tus datos escribiéndonos directamente a{" "}
-                      <a href="mailto:hola@vectralya.com" className="text-accent underline">
-                        hola@vectralya.com
-                      </a>
-                      .
-                    </p>
-                  </div>
-                </div>
-              </DialogContent>
-            </Dialog>
           </div>
 
-          <p className="text-xs text-muted">© 2026 VECTRALYA · Consultora de Cloud Computing</p>
+          <p className="text-center text-xs text-muted md:text-right">© 2026 VECTRALYA · Consultora de Cloud Computing</p>
         </div>
       </footer>
     </div>
