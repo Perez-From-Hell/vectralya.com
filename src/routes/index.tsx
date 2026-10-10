@@ -28,8 +28,21 @@ export const Route = createFileRoute("/")({
           "Estrategia, arquitectura, seguridad y desarrollo de software cloud que transforman infraestructura en ventaja competitiva medible.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://vectralya.com/" },
+      { property: "og:locale", content: "es_ES" },
+      { property: "og:site_name", content: "VECTRALYA" },
+      { property: "og:image", content: "https://vectralya.com/og-image.jpg" },
+      { property: "og:image:alt", content: "VECTRALYA — Consultora de Cloud Computing" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "VECTRALYA — Consultora de Cloud Computing" },
+      {
+        name: "twitter:description",
+        content:
+          "Estrategia, arquitectura, seguridad y desarrollo de software cloud que transforman infraestructura en ventaja competitiva medible.",
+      },
+      { name: "twitter:image", content: "https://vectralya.com/og-image.jpg" },
     ],
+    links: [{ rel: "canonical", href: "https://vectralya.com/" }],
   }),
   component: Index,
 });
