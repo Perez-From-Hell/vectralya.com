@@ -10,7 +10,6 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import heroCloud from "../assets/hero-cloud.jpg";
-import marta from "../assets/marta.jpg";
 
 
 export const Route = createFileRoute("/")({
@@ -172,7 +171,6 @@ function Index() {
 
       <Services />
       <Process />
-      <Testimonials />
       <Contact />
 
       <footer className="relative z-10 border-t border-white/10">
@@ -214,9 +212,6 @@ function Nav() {
           </a>
           <a href="#proceso" className="transition hover:text-ink">
             Cómo trabajamos
-          </a>
-          <a href="#clientes" className="transition hover:text-ink">
-            Clientes
           </a>
         </div>
         <a
@@ -301,51 +296,6 @@ function Process() {
               <p className="mt-2 text-sm text-muted">{p.text}</p>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Testimonials() {
-  return (
-    <section id="clientes" className="relative z-10 mx-auto max-w-7xl scroll-mt-8 px-6 py-16">
-      <div className="grid gap-5 lg:grid-cols-3">
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl lg:col-span-2">
-          <p className="font-display text-2xl leading-snug">
-            "Reducimos el coste de nube un 41% en dos trimestres sin tocar el rendimiento. VECTRALYA
-            entendió nuestro negocio antes que nosotros."
-          </p>
-          <div className="mt-6 flex items-center gap-3">
-            <img
-              src={marta}
-              alt="Retrato de Marta Cerezo"
-              width={512}
-              height={512}
-              loading="lazy"
-              className="size-12 rounded-full object-cover"
-            />
-            <div>
-              <p className="font-semibold">Marta Cerezo</p>
-              <p className="text-sm text-muted">CTO, Grupo LogiData</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col gap-5">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-            <p className="text-sm text-ink/80">
-              "El programa de mentoring elevó a nuestro equipo a nivel productivo en semanas."
-            </p>
-            <p className="mt-4 text-sm font-semibold">Raúl Ibáñez</p>
-            <p className="text-xs text-muted">Head of Platform, NovaRetail</p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-            <p className="text-sm text-ink/80">
-              "Cumplimos ISO 27001 la primera vez. Proceso impecable."
-            </p>
-            <p className="mt-4 text-sm font-semibold">Lucía Ferrán</p>
-            <p className="text-xs text-muted">CISO, FinCap Digital</p>
-          </div>
         </div>
       </div>
     </section>
