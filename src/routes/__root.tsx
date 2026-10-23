@@ -92,9 +92,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://vectralya.com/" },
       { property: "og:locale", content: "es_ES" },
+      { property: "og:locale:alternate", content: "es_PE" },
       { property: "og:site_name", content: "VECTRALYA" },
       { property: "og:image", content: "https://vectralya.com/og-image.jpg" },
       { property: "og:image:alt", content: "VECTRALYA — Consultora de Cloud Computing" },
+      { name: "robots", content: "index, follow" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "VECTRALYA — Consultora de Cloud Computing" },
       {

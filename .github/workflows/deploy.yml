@@ -1,3 +1,8 @@
+# Custom domain checklist (www → apex):
+# 1. DNS: www CNAME → apex or GitHub Pages target
+# 2. GitHub Pages → Custom domain: add www.vectralya.com alongside vectralya.com
+# 3. Verify 301 https://www.vectralya.com → https://vectralya.com/ and HTTP → HTTPS
+# 4. Search Console: domain property (or both URLs) + request indexing after deploy
 name: Deploy to GitHub Pages
 
 on:

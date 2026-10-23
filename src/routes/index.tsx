@@ -12,15 +12,26 @@ import {
 import heroCloud from "../assets/hero-cloud.jpg";
 
 
+const SITE_DESCRIPTION =
+  "Estrategia, arquitectura, seguridad y desarrollo de software cloud. Assessment de madurez, migraciones, FinOps, DevSecOps y formación para equipos técnicos.";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "VECTRALYA",
+  url: "https://vectralya.com/",
+  logo: "https://vectralya.com/favicon.svg",
+  email: "hola@vectralya.com",
+  description: SITE_DESCRIPTION,
+  areaServed: [{ "@type": "Country", name: "Perú" }, { "@type": "Country", name: "España" }],
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "VECTRALYA — Consultora de Cloud Computing" },
-      {
-        name: "description",
-        content:
-          "Estrategia, arquitectura, seguridad y desarrollo de software cloud. Assessment de madurez, migraciones, FinOps, DevSecOps y formación para equipos técnicos.",
-      },
+      { name: "description", content: SITE_DESCRIPTION },
+      { name: "robots", content: "index, follow" },
       { property: "og:title", content: "VECTRALYA — Consultora de Cloud Computing" },
       {
         property: "og:description",
@@ -30,6 +41,7 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://vectralya.com/" },
       { property: "og:locale", content: "es_ES" },
+      { property: "og:locale:alternate", content: "es_PE" },
       { property: "og:site_name", content: "VECTRALYA" },
       { property: "og:image", content: "https://vectralya.com/og-image.jpg" },
       { property: "og:image:alt", content: "VECTRALYA — Consultora de Cloud Computing" },
@@ -43,6 +55,12 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: "https://vectralya.com/og-image.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://vectralya.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(organizationJsonLd),
+      },
+    ],
   }),
   component: Index,
 });
@@ -134,6 +152,7 @@ function Index() {
             Consultora de Cloud Computing
           </span>
           <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight lg:text-6xl">
+            <span className="block text-accent">VECTRALYA</span>
             Lleva tu nube al nivel de tu ambición.
           </h1>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-muted">
@@ -376,13 +395,18 @@ function Contact() {
               <span className="grid size-9 place-items-center rounded-lg bg-accent/15 text-accent">
                 <Mail className="size-4" />
               </span>
-              <span className="text-ink/80">hola@vectralya.com</span>
+              <a
+                href="mailto:hola@vectralya.com"
+                className="text-ink/80 transition hover:text-accent"
+              >
+                hola@vectralya.com
+              </a>
             </div>
             <div className="flex items-center gap-3">
               <span className="grid size-9 place-items-center rounded-lg bg-accent/15 text-accent">
                 <MapPin className="size-4" />
               </span>
-              <span className="text-ink/80">Perú · España · Remoto</span>
+              <span className="text-ink/80">Consultoría cloud en Perú y España · Remoto</span>
             </div>
           </div>
         </div>
