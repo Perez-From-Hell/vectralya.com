@@ -114,6 +114,16 @@ const services = [
       "Automatización con IaC y scripts",
     ],
   },
+  {
+    num: "06",
+    title: "Obsolescencia de Software e Infraestructura",
+    lead: "Identificamos deuda técnica y componentes al final de su ciclo de vida antes de que se conviertan en riesgo operativo, de seguridad o de coste.",
+    items: [
+      "Inventario y clasificación de stack obsoleto (SO, runtimes, frameworks, dependencias)",
+      "Análisis de EOL/EOS y exposición a vulnerabilidades sin parche",
+      "Plan de modernización priorizado por riesgo e impacto de negocio",
+    ],
+  },
 ];
 
 const process = [
