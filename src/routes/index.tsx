@@ -23,7 +23,11 @@ const organizationJsonLd = {
   logo: "https://vectralya.com/favicon.svg",
   email: "hola@vectralya.com",
   description: SITE_DESCRIPTION,
-  areaServed: [{ "@type": "Country", name: "Perú" }, { "@type": "Country", name: "España" }],
+  areaServed: [
+    { "@type": "Country", name: "Perú" },
+    { "@type": "Country", name: "España" },
+    { "@type": "City", name: "Lima" },
+  ],
 };
 
 export const Route = createFileRoute("/")({
@@ -40,8 +44,8 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://vectralya.com/" },
-      { property: "og:locale", content: "es_ES" },
-      { property: "og:locale:alternate", content: "es_PE" },
+      { property: "og:locale", content: "es_PE" },
+      { property: "og:locale:alternate", content: "es_ES" },
       { property: "og:site_name", content: "VECTRALYA" },
       { property: "og:image", content: "https://vectralya.com/og-image.jpg" },
       { property: "og:image:alt", content: "VECTRALYA — Consultora de Cloud Computing" },
@@ -54,7 +58,12 @@ export const Route = createFileRoute("/")({
       },
       { name: "twitter:image", content: "https://vectralya.com/og-image.jpg" },
     ],
-    links: [{ rel: "canonical", href: "https://vectralya.com/" }],
+    links: [
+      { rel: "canonical", href: "https://vectralya.com/" },
+      { rel: "alternate", hrefLang: "es-PE", href: "https://vectralya.com/" },
+      { rel: "alternate", hrefLang: "es-ES", href: "https://vectralya.com/" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://vectralya.com/" },
+    ],
     scripts: [
       {
         type: "application/ld+json",

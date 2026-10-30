@@ -108,6 +108,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "canonical", href: "https://vectralya.com/" },
+      { rel: "alternate", hrefLang: "es-PE", href: "https://vectralya.com/" },
+      { rel: "alternate", hrefLang: "es-ES", href: "https://vectralya.com/" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://vectralya.com/" },
       {
         rel: "stylesheet",
         href: appCss,
@@ -126,7 +129,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap",
       },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
     ],
   }),
   shellComponent: RootShell,
@@ -137,7 +141,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es-PE">
       <head>
         <HeadContent />
       </head>
